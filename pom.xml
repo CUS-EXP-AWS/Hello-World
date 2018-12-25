@@ -8,9 +8,9 @@
 	<description>Simplest possible Java Webapp</description>
 
 	<scm>
-      <connection>scm:git:${GIT_URL}</connection>
-      <url>${GIT_URL}</url>
-      <developerConnection>scm:git:${GIT_URL}</developerConnection>
+      <connection>scm:git:git@github.com:CUS-EXP-AWS/Hello-World.git</connection>
+      <url>git@github.com:CUS-EXP-AWS/Hello-World.git</url>
+      <developerConnection>scm:git:git@github.com:CUS-EXP-AWS/Hello-World.git</developerConnection>
       <tag></tag>
 </scm>
 
