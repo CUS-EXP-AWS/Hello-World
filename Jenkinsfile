@@ -69,7 +69,6 @@ pipeline {
                 expression { params.BUILD == 'RELEASE' }
             }
             steps {
-            sshagent(credentials: ['GitHub-Credentials']) {
                     script {
                         sh 'git checkout ${GIT_BRANCH}'
                         def server = Artifactory.server('artifacts')
@@ -83,7 +82,6 @@ pipeline {
                         server.publishBuildInfo buildInfo
 
                     }
-                }
             }
 
         }
