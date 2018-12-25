@@ -8,6 +8,25 @@
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
 
+	<scm>
+      <connection>scm:git:${GIT_URL}</connection>
+      <url>${GIT_URL}</url>
+      <developerConnection>scm:git:${GIT_URL}</developerConnection>
+      <tag></tag>
+</scm>
+
+<repositories>
+	<repository>
+	 <id>central</id>
+	 <url>http://18.188.14.221:8081/artifactory/libs-release</url>
+	 </repository>
+
+	 <repository>
+	 <id>snapshots</id>
+	 <url>http://18.188.14.221:8081/artifactory/libs-snapshot</url>
+	 </repository>
+</repositories>
+
 	<build>
 		<plugins>
 			<plugin>
