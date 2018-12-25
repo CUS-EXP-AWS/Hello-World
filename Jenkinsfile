@@ -69,6 +69,7 @@ pipeline {
                 expression { params.BUILD == 'RELEASE' }
             }
             steps {
+            sshagent(credentials: ['scmaccess_ssh']) {
                     script {
                         sh 'git checkout ${GIT_BRANCH}'
                         def server = Artifactory.server('artifacts')
@@ -80,6 +81,8 @@ pipeline {
                         buildInfo = rtMaven.run pom: 'target/checkout/pom.xml', goals: 'clean install -Dmaven.test.skip=true'
                         rtMaven.deployer.deployArtifacts buildInfo
                         server.publishBuildInfo buildInfo
+
+                    }
 
                     }
             }
