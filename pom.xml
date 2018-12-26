@@ -9,9 +9,9 @@
 
 	<scm>
       <connection>scm:git:git@github.com:CUS-EXP-AWS/Hello-World.git</connection>
-      <url>git@github.com:CUS-EXP-AWS/Hello-World.git</url>
+      <url>https://github.com/CUS-EXP-AWS/Hello-World.git</url>
       <developerConnection>scm:git:git@github.com:CUS-EXP-AWS/Hello-World.git</developerConnection>
-      <tag></tag>
+      <tag>HEAD</tag>
 </scm>
 
 <repositories>
