@@ -7,11 +7,19 @@
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
 
-	<scm>
+	<!-- <scm>
       <connection>scm:git:git@github.com:CUS-EXP-AWS/Hello-World.git</connection>
-      <url>https://github.com/CUS-EXP-AWS/Hello-World.git</url>
+      <url>git@github.com:CUS-EXP-AWS/Hello-World.git</url>
       <developerConnection>scm:git:git@github.com:CUS-EXP-AWS/Hello-World.git</developerConnection>
       <tag>HEAD</tag>
+</scm>
+-->
+
+<scm>
+		<connection>scm:git:https://github.com/CUS-EXP-AWS/Hello-World.git</connection>
+		<url>https://github.com/CUS-EXP-AWS/Hello-World.git</url>
+		<developerConnection>scm:git:https://github.com/CUS-EXP-AWS/Hello-World.git</developerConnection>
+		<tag>HEAD</tag>
 </scm>
 
 <repositories>
