@@ -1,7 +1,8 @@
 pipeline {
 
     // agent { label 'RHEL7-LABLE' }
-   agent any
+    agent { label 'master-jenkins' }
+   // agent any
     tools {
         maven 'maven-default'
         jdk 'jdk-1.8'
