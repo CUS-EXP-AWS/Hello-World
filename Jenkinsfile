@@ -1,7 +1,7 @@
 pipeline {
 
-   agent { label 'RHEL7-LABLE' }
-  //  agent { label 'master-jenkins' }
+  // agent { label 'RHEL7-LABLE' }
+ agent { label 'master-jenkins' }
    // agent any
     tools {
         maven 'maven-default'
