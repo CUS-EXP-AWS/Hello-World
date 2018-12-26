@@ -16,11 +16,12 @@
 -->
 
 <scm>
-		<connection>scm:git:https://github.com/CUS-EXP-AWS/Hello-World.git</connection>
-		<url>https://github.com/CUS-EXP-AWS/Hello-World.git</url>
-		<developerConnection>scm:git:https://github.com/CUS-EXP-AWS/Hello-World.git</developerConnection>
-		<tag>HEAD</tag>
+    <connection>scm:git:git@github.com:CUS-EXP-AWS/Hello-World.git</connection>
+    <url>git@github.com:CUS-EXP-AWS/Hello-World.git</url>
+    <developerConnection>scm:git:git@github.com:CUS-EXP-AWS/Hello-World.git</developerConnection>
+    <tag></tag>
 </scm>
+
 
 <repositories>
 	<repository>
@@ -33,6 +34,17 @@
 	 <url>http://18.188.14.221:8081/artifactory/libs-snapshot</url>
 	 </repository>
 </repositories>
+<profiles>
+	<profile>
+		<id>java8-doclint-disabled</id>
+		<activation>
+			<jdk>[1.8,)</jdk>
+		</activation>
+		<properties>
+			<javadoc.opts>-Xdoclint:none</javadoc.opts>
+		</properties>
+	</profile>
+</profiles>
 
 	<build>
 		<plugins>
@@ -49,7 +61,50 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.1.1</version>
 			</plugin>
-		</plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.4.2</version>
+				<configuration>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<releaseProfiles>releases</releaseProfiles>
+					<source>1.5</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9</version>
+        <executions>
+            <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                    <goal>jar</goal>
+                </goals>
+                <configuration>
+                    <additionalparam>${javadoc.opts}</additionalparam>
+                </configuration>
+            </execution>
+        </executions>
+   </plugin>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+          <reportPlugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-javadoc-plugin</artifactId>
+              <configuration>
+                <additionalparam>${javadoc.opts}</additionalparam>
+              </configuration>
+            </plugin>
+          </reportPlugins>
+        </configuration>
+   </plugin>
+	</plugins>
 	</build>
-
 </project>
