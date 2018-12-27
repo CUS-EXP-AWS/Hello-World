@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.efsavage</groupId>
 	<artifactId>hello-world-war</artifactId>
-	<version>1.0.7-SNAPSHOT</version>
+	<version>1.0.7</version>
 	<packaging>war</packaging>
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
@@ -13,7 +13,7 @@
     <connection>scm:git:git@github.com:CUS-EXP-AWS/Hello-World.git</connection>
     <url>git@github.com:CUS-EXP-AWS/Hello-World.git</url>
     <developerConnection>scm:git:git@github.com:CUS-EXP-AWS/Hello-World.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v1.0.7</tag>
 </scm>
 
 
