@@ -63,15 +63,15 @@ function blinkFunc() {
 }
 timer1 = setInterval("textFunc()", 150); // every 150 milliseconds
 </script>
-<h4> "I hope that in this year to come, you make mistakes.<br/>
+<h2> "I hope that in this year to come, you make mistakes.<br/><br/><br/>
 
-Because if you are making mistakes, then you're making new things, trying new things, learning, living, pushing yourself, changing yourself, changing your world. You're doing things you've never done before, and more importantly, you're doing something".<br/>
+Because if you are making mistakes, then you're making new things, trying new things, learning, living, pushing yourself, changing yourself, changing your world. You're doing things you've never done before, and more importantly, you're doing something".<br/><br/>
 
---Neil Gaiman <br/> </h4>
+--NeilTGaiman <br/> </h2>
 
 
 <p> <center>
-	Note:The website is still developing any may down for maintenance.</center></p>
+	Note:Temporally website was launched in January 1st, 2019. The site is still developing and may down for maintenance.</center></p>
 <p><center>Site developed by "Vasudev Ramisetti"</center></p>
 
 </body>
