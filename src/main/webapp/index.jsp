@@ -63,11 +63,11 @@ function blinkFunc() {
 }
 timer1 = setInterval("textFunc()", 150); // every 150 milliseconds
 </script>
-<h2> "I hope that in this year to come, you make mistakes.<br/><br/><br/>
+<h3> "I hope that in this year to come, you make mistakes.<br/><br/>
 
 Because if you are making mistakes, then you're making new things, trying new things, learning, living, pushing yourself, changing yourself, changing your world. You're doing things you've never done before, and more importantly, you're doing something".<br/><br/>
 
---NeilTGaiman <br/> </h2>
+--NeilTGaiman <br/> </h3>
 
 
 <p> <center>
