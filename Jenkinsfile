@@ -70,7 +70,7 @@ stage 'package'
 
 
  // //To deploy on led01506 server
-  stage 'Tower template execution-led01506'
+  stage 'Tower template execution'
 
       towerdeploy("Skynet-Prepod", "Skynet-Prepod", "Dev-1", "dev")
 
@@ -90,7 +90,7 @@ stage 'package'
 
       def towerdeploy(String jobTemplateName, String inventoryName, String groupName, String repoName)  {
       sh "echo ${buildversion}"
-      extraVars = "{'VERSION': '${buildversion}', 'BuildNumber': '${env.BUILD_NUMBER}', 'REPO': '${repoName}' , 'BRANCHNAME': '${env.BRANCH_NAME}'}"
+      extraVars = "{'VERSION': '${buildversion}' , 'REPO': '${repoName}'}"
       ansibleTower(
       towerServer: 'tower',
       templateType: 'job',
