@@ -11,10 +11,12 @@ if ( branchName == 'master' || branchName == 'development') {
   node('RHEL7-LABLE') {
     //Java and maven path setup
     env.JAVA_HOME="${tool 'jdk-1.8'}"
+    env.MAVEN_HOME="${tool 'maven-default'}"
     env.PATH="${JAVA_HOME}/bin:${PATH}"
-    env.PATH = "${tool 'maven-default'}/bin:${env.PATH}"
+    //env.PATH = "${tool 'maven-default'}/bin:${env.PATH}"
     // defining artifactory configurations
-    def server = Artifactory.server('artifacts')
+    env.PATH = "${MAVEN_HOME}/bin:${env.PATH}"
+
 
    try {
 
@@ -48,7 +50,7 @@ stage 'package'
 
 //Uploading artifacts to Jfrog artifactory
    stage 'Upload artifacts to Dev'
-
+     def server = Artifactory.server('artifacts')
      def rtMaven = Artifactory.newMavenBuild()
      rtMaven.deployer server: server, releaseRepo: 'libs-release', snapshotRepo: 'libs-snapshot'
    //  rtMaven.resolver server: server, releaseRepo: 'libs-release', snapshotRepo: 'libs-snapshot'
