@@ -1,6 +1,4 @@
 #!groovy
-import java.io.File;
-import java.io.IOException;
 
 devEmailId =   "vasudev.ramisetti@gmail.com"
 qaEmailId =    "vasudev.ramisetti@gmail.com"
