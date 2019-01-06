@@ -40,7 +40,25 @@ CODE ==> mvn package ==> WAR ==> WEBAPPS (TOMCAT)
 
 
 
+ISSUES: 
 
+1. AWS instance create ==> .pem file 
+
+   access: ssh -i "veera-hanuma.pem" ec2-user@ec2-18-218-57-121.us-east-2.compute.amazonaws.com
+   
+    veera-hanuma.pem   chmod 400 ==> change
+    
+    
+ 2. Tomcat install == > https://www.howtoforge.com/tutorial/ubuntu-apache-tomcat/    Installed  8080 installed 
+ 
+ 
+ 3. Open 8080 port in AWS server 
+ 
+ 4. Git install on AWS server 
+ 
+ 5. maven install 
+ 
+ 
 
 
 
